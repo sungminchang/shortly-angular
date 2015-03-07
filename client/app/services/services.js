@@ -6,17 +6,6 @@ angular.module('shortly.services', [])
 
 
   var retrieveLinks = function() {
-  //   $http.get('/api/links').
-  //     success(function(data, status, headers, config) {
-  //       return data;
-  //       // this callback will be called asynchronously
-  //       // when the response is available
-  //     }).
-  //     error(function(data, status, headers, config) {
-  //       // called asynchronously if an error occurs
-  //       // or server returns response with an error status.
-  //   });
-  // };
     return $http({
       method: 'GET',
       url: '/api/links'
@@ -24,6 +13,17 @@ angular.module('shortly.services', [])
     })
     .then(function(resp) {
       return resp.data;
+    });
+  };
+
+  var addLink = function(link) {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data:link
+    })
+    .then(function(resp) {
+      return resp.status(201, '');
     });
   };
 
