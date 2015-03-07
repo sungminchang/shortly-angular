@@ -23,12 +23,13 @@ angular.module('shortly.services', [])
       data:link
     })
     .then(function(resp) {
-      return resp.status(201, '');
+      return resp.status = 201;
     });
   };
 
     return {
-      retrieveLinks: retrieveLinks
+      retrieveLinks: retrieveLinks,
+      addLink: addLink
     };
 
 })
