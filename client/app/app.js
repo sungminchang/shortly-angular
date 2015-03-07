@@ -22,7 +22,7 @@ angular.module('shortly', [
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
-    }
+    })
     // Your code here
 
     // We add our $httpInterceptor into the array

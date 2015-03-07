@@ -5,15 +5,15 @@ angular.module('shortly.links', [])
   $scope.data = {};
 
   $scope.getLinks = function() {
-    $http.get('/api/links').
-      success(function(data, status, headers, config) {
+    Links.retrieveLinks()
+      .then(function(data) {
         $scope.data.links = data;
-      }).
-      error(function(data, status, headers, config) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
+      })
+      .catch(function(error) {
+        console.error(error);
       });
-      };
+
+  };
 
   $scope.getLinks();
 });
