@@ -5,7 +5,7 @@
   <input type="text" ng-model="searchString">
   <button>Search</button>
   <h3>Links</h3>
-    <div class="info" ng-repeat="link in data.links | searchFor:searchString">
+    <div class="info" ng-repeat="link in data.links | searchFor:searchString | orderBy:predicate">
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
       <div class='title'>{{link.title}}</div>
       <div class='original'>{{link.url}}</div>
