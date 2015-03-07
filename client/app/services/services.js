@@ -20,10 +20,11 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      data:link
+      data: link
     })
     .then(function(resp) {
-      return resp.status = 201;
+      resp.status = 201;
+      return resp; // TAKE CARE OF THIS PROMISE
     });
   };
 
