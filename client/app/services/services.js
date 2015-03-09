@@ -1,4 +1,4 @@
-angular.module('shortly.services', [])
+angular.module('vitastats.services', [])
 
 .factory('Links', function ($http) {
   // Your code here

@@ -1,4 +1,4 @@
-angular.module('shortly.links', [])
+angular.module('vitastats.links', [])
 
 .controller('LinksController', function ($scope, $http, Links) {
   // Your code here
